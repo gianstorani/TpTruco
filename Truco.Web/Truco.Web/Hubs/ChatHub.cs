@@ -12,6 +12,7 @@ namespace Truco.Web.Hubs
         {
             Clients.All.mostrarMensaje(nombre, texto);
         }
+
         public void EnviarMensajePrivado(string nombre, string texto)
         {
             Clients.Caller.mostrarMensaje(nombre, texto);

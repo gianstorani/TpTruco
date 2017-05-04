@@ -10,6 +10,6 @@ namespace TpTruco.Entidades
     {
         public int Numero { get; set; }
         public Palos Palo { get; set; } 
-        
+    
     }
 }

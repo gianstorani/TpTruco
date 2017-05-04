@@ -7,5 +7,10 @@ namespace TpTruco.Entidades
     class Jugador
     {
         public string Nombre { get; set; }
+
+        public bool TieneLaMano { get; set; }
+
+        public List<Cartas> Cartas { get; set; }
+
     }
 }
