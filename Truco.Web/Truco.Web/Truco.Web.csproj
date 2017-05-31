@@ -202,10 +202,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\bootbox.js" />
-    <Content Include="Scripts\jquery-1.6.4.js" />
-    <Content Include="Scripts\jquery-1.6.4.min.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery.signalR-2.2.1.js" />
     <Content Include="Scripts\jquery.signalR-2.2.1.min.js" />
@@ -216,6 +213,12 @@
     <Compile Include="Hubs\TrucoClean.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TpTruco\TpTruco.Entidades\TpTruco.Entidades.csproj">
+      <Project>{0631c90c-fe9d-4a82-b6df-27fa9ae4578d}</Project>
+      <Name>TpTruco.Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

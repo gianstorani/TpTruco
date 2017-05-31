@@ -4,8 +4,9 @@ using System.Text;
 
 namespace TpTruco.Entidades
 {
-    class Partida
+    public class Partida
     {
-        
+        public List<Jugador> ListaJugadores { get; set; }
+
     }
 }
