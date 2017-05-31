@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using Truco.Web.Entities;
 
 namespace Truco.Web.Hubs
 {
@@ -22,7 +21,7 @@ namespace Truco.Web.Hubs
             // Sino ...
             Clients.Others.mostrarnuevousuario(nombre);
 
-            // Por cada jugador
+            // Por cada jugador - Les avisa que hay un nuevo jugador
             Clients.All.mostrarnombre(jugador);
 
             // Si es el ultimo jugador...
