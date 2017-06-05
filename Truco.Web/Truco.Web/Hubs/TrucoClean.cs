@@ -22,7 +22,7 @@ namespace Truco.Web.Hubs
             // Sino ...
             Clients.Others.mostrarnuevousuario(nombre);
 
-            // Por cada jugador - Les avisa que hay un nuevo jugador
+            // Por cada jugador - Les avisa que hay un nuevo jugador asdasd
             Clients.All.mostrarnombre(nombre);
 
             // Si es el ultimo jugador...
@@ -31,8 +31,9 @@ namespace Truco.Web.Hubs
             Clients.All.mostrarpuntos("Ellos", 0);
             Clients.All.mostrarpuntos("Nosotros", 0);
 
-           // Repartir();
+            // Repartir();
         }
+    }//agregado para qe compile
 
     //    public void cantar(string accion) 
     //    {

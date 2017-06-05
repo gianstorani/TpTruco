@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TpTruco.Entidades
 {
-    class Mazo
+    public class Mazo
     {
     }
 }

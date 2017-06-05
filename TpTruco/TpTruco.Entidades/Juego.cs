@@ -29,6 +29,25 @@ namespace TpTruco.Entidades
 
                 Partida.ListaJugadores.Add(jugador);
 
+                jugador.Orden = Partida.ListaJugadores.Count;
+
+                switch (jugador.Orden)
+                {
+                    case 1: jugador.NombreInterno = "User1";
+                            break;
+
+                    case 2:
+                        jugador.NombreInterno = "User2";
+                        break;
+
+                    case 3:
+                        jugador.NombreInterno = "User3";
+                        break;
+
+                    case 4:
+                        jugador.NombreInterno = "User4";
+                        break;
+                }
 
 
                 if(Partida.ListaJugadores.Count == 4)

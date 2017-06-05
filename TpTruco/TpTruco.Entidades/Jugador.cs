@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TpTruco.Entidades
 {
-    class Jugador
+    public class Jugador
     {
         public string Nombre { get; set; }
 
