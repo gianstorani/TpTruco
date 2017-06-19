@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using System.Text;
 
 
+
 namespace TpTruco.Entidades
 {
     public class Juego
     {
         public bool JuegoCompleto { get; set; }
 
-        public Partida Partida { get; set; }
+        public Partida partida { get; set; }
+
+        public List<Jugador> ListaJugadores { get; set; }
 
         public Juego()
         {
             JuegoCompleto = false;
+
+            this.partida = new Partida();
+
+            this.ListaJugadores = new List<Jugador>();
         }
 
         public void CrearPartida()
@@ -21,15 +28,16 @@ namespace TpTruco.Entidades
 
         }
 
-        public void AgregarJugador(string nombre)
+        public void AgregarJugador(string nombre, string id)
         {
             if (JuegoCompleto == false)
             {
-                var jugador = new Jugador(nombre);
+                var jugador = new Jugador(nombre,id);
 
-                Partida.ListaJugadores.Add(jugador);
+                ListaJugadores.Add(jugador);
 
-                jugador.Orden = Partida.ListaJugadores.Count;
+                jugador.Orden = ListaJugadores.Count;
+
 
                 switch (jugador.Orden)
                 {
@@ -50,7 +58,7 @@ namespace TpTruco.Entidades
                 }
 
 
-                if(Partida.ListaJugadores.Count == 4)
+                if(ListaJugadores.Count == 4)
                 {
                     JuegoCompleto = true;
                 }

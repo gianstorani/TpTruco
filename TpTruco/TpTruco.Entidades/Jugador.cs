@@ -14,9 +14,10 @@ namespace TpTruco.Entidades
 
         public int Orden { get; set; }
 
-        public Jugador(string nombre)
+        public Jugador(string nombre, string id)
         {
             this.Nombre = nombre;
+            this.IdConexion = id;
         }
 
     }
