@@ -23,10 +23,6 @@ namespace TpTruco.Entidades
             this.ListaJugadores = new List<Jugador>();
         }
 
-        public void CrearPartida()
-        {
-
-        }
 
         public void AgregarJugador(string nombre, string id)
         {
@@ -67,6 +63,17 @@ namespace TpTruco.Entidades
             }
         }
 
+        public int PuntosEnvido(Equipo equipo)
+        {
+            
+            return 0;
+        }
+
+        public Equipo GanadorEnvido() {
+
+
+            return new Equipo();
+        }
 
     }
 }

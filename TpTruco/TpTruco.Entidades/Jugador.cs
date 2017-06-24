@@ -14,6 +14,8 @@ namespace TpTruco.Entidades
 
         public int Orden { get; set; }
 
+        public List<Cartas> CartasActuales { get; set; }
+
         public Jugador(string nombre, string id)
         {
             this.Nombre = nombre;

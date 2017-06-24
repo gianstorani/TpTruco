@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using static TpTruco.Entidades.Mazo;
 
 namespace TpTruco.Entidades
 {
@@ -9,13 +10,17 @@ namespace TpTruco.Entidades
     { 
         public bool Dispobile { get; set; }
         public string Codigo { get; set; }
-        public int Valor { get; set; }
+        public int ValorTruco { get; set; }
+        public int ValorEnvido { get; set; }
+        public Palos Palo { get; set; }
 
-        public Cartas(string codigo, int valor)
+        public Cartas(string codigo, int valor, int valorenvido, Palos palo)
         {
             this.Dispobile = true;
             this.Codigo = codigo;
-            this.Valor = valor;
+            this.ValorTruco = valor;
+            this.ValorEnvido = valorenvido;
+            this.Palo = palo;
         }
     
     }

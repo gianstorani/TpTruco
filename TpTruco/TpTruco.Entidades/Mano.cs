@@ -6,6 +6,8 @@ namespace TpTruco.Entidades
 {
     public class Mano
     {
+        public int PuntosEquipo1 { get; set; }
+        public int PuntosEquipo2 { get; set; }
 
         public void Repartir()
         {
