@@ -9,13 +9,17 @@ namespace TpTruco.Entidades
     { 
         public bool Dispobile { get; set; }
         public string Codigo { get; set; }
-        public int Valor { get; set; }
+        public int ValorTruco { get; set; }
+        public int ValorEnvido { get; set; }
+        public string Palo { get; set; }
 
-        public Cartas(string codigo, int valor)
+        public Cartas(string codigo, int valor, int valorenvido, string palo)
         {
             this.Dispobile = true;
             this.Codigo = codigo;
-            this.Valor = valor;
+            this.ValorTruco = valor;
+            this.ValorEnvido = valorenvido;
+            this.Palo = palo;
         }
     
     }
