@@ -15,11 +15,11 @@ namespace TpTruco.Test
             var juego = new Juego();
 
             //act
-            juego.AgregarJugador("Carlitos");
-            juego.AgregarJugador("Pedrito");
-            juego.AgregarJugador("Juancito");
-            juego.AgregarJugador("Pepito");
-            juego.AgregarJugador("Este forro no deberia entrar");
+            juego.AgregarJugador("Carlitos", "123");
+            juego.AgregarJugador("Pedrito", "123");
+            juego.AgregarJugador("Juancito", "123");
+            juego.AgregarJugador("Pepito", "123");
+            juego.AgregarJugador("Este forro no deberia entrar", "123");
 
 
 

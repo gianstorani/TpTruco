@@ -4,12 +4,19 @@ using System.Text;
 
 namespace TpTruco.Entidades
 {
-    public enum Palos { Espada = 1, Basto =2, Oro = 3, Copa = 4};
 
     public class Cartas
-    {
-        public int Numero { get; set; }
-        public Palos Palo { get; set; } 
+    { 
+        public bool Dispobile { get; set; }
+        public string Codigo { get; set; }
+        public int Valor { get; set; }
+
+        public Cartas(string codigo, int valor)
+        {
+            this.Dispobile = true;
+            this.Codigo = codigo;
+            this.Valor = valor;
+        }
     
     }
 }

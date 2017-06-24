@@ -235,7 +235,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55456</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55456/Juego.html</IISUrl>
+          <IISUrl>http://localhost:55456/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:55456/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

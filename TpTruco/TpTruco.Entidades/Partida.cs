@@ -9,5 +9,7 @@ namespace TpTruco.Entidades
     public class Partida
     {
         public List<Jugador> ListaJugadores { get; set; }
+
+        
     }
 }

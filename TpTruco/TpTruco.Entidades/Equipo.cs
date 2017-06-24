@@ -7,6 +7,7 @@ namespace TpTruco.Entidades
     public class Equipo
     {
         public string Nombre { get; set; }
+      
 
     }
 }
