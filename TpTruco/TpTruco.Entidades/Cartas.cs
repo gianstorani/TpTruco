@@ -13,14 +13,16 @@ namespace TpTruco.Entidades
         public int ValorTruco { get; set; }
         public int ValorEnvido { get; set; }
         public Palos Palo { get; set; }
+        public string Imagen { get; set; }
 
-        public Cartas(string codigo, int valor, int valorenvido, Palos palo)
+        public Cartas(string codigo, int valor, int valorenvido, Palos palo, string imagen)
         {
             this.Dispobile = true;
             this.Codigo = codigo;
             this.ValorTruco = valor;
             this.ValorEnvido = valorenvido;
             this.Palo = palo;
+            this.Imagen = imagen;
         }
     
     }
