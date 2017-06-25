@@ -63,6 +63,7 @@ namespace TpTruco.Entidades
             }
         }
 
+
         public int PuntosEnvido(Equipo equipo)
         {
             
@@ -74,6 +75,27 @@ namespace TpTruco.Entidades
 
             return new Equipo();
         }
+
+        public void ComenzarJuego(int ValorMaximo)
+        {
+            while(partida.Equipo1.Puntos > ValorMaximo && partida.Equipo2.Puntos > ValorMaximo)
+            {
+                Jugar();
+            }
+            //JuegoTerminado();
+        }
+
+        public void Jugar()
+        {
+            //Repartir Mano
+            //Desarrollo de la mano (envido, truco, etc)
+            //Contar puntos
+        }
+
+        //public void JuegoTerminado()
+        //{
+
+        //}
 
     }
 }
