@@ -12,6 +12,8 @@ namespace TpTruco.Entidades
             //
         }
 
+        
+
         public bool truco { get; set; }
         public bool retruco { get; set; }
         public bool vale4 { get; set; }

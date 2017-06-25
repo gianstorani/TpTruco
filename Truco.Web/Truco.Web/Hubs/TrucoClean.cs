@@ -47,9 +47,6 @@ namespace Truco.Web.Hubs
                 }
             }
 
-
-
-
             //Repartir();
         }
 
@@ -78,6 +75,7 @@ namespace Truco.Web.Hubs
                     break;
                 case "envido":
                     Clients.All.hidemazo();
+                    
                     break;
                 case "envidoenvido":
                     Clients.All.hidemazo();
@@ -136,11 +134,10 @@ namespace Truco.Web.Hubs
 
         public void Repartir()
         {
+            Clients.All.limpiarTablero();
+
             foreach (Jugador jugador in juego.ListaJugadores)
             {
-
-
-                Clients.All.limpiarTablero();
 
                 Clients.Client(jugador.IdConexion).mostrarCartas(carta);
 

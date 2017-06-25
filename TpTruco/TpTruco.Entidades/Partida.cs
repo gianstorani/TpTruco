@@ -22,12 +22,12 @@ namespace TpTruco.Entidades
             Shuffle(cartas);
 
             var jugadoresOrdenados = new List<Jugador>();
-            jugadoresOrdenados.AddRange(ListaJugadores.OrderBy(a => a.Orden));
+            jugadoresOrdenados.AddRange(ListaJugadores.OrderBy(x => x.Orden));
 
-            int x = 4;
-            while(x > 0)
+            int xi = 4;
+            while(xi > 0)
             {
-                x = x - 1;
+                xi = xi - 1;
                 foreach (var jugador in jugadoresOrdenados)
                 {
                     //asignar una carta a cada jugador, deshabilitar la carta
@@ -38,7 +38,7 @@ namespace TpTruco.Entidades
 
         }
 
-        private Random rng = new Random();
+        public Random rng = new Random();
         public void Shuffle<T>(this IList<T> list)
         {
             int n = list.Count;
