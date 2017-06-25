@@ -38,3 +38,19 @@
             MazoCartas.Add(new Cartas("10Oro", 5,0));
             MazoCartas.Add(new Cartas("11Oro", 6,0));
             MazoCartas.Add(new Cartas("12Oro", 7,0));
+
+public static List<T> Mezclar<T>(List<T> input)
+{
+    List<T> arr = input;
+    List<T> arrDes = new List<T>();
+ 
+    Random randNum = new Random();
+    while (arr.Count > 0)
+    {
+        int val = randNum.Next(0, arr.Count - 1);
+        arrDes.Add(arr[val]);
+        arr.RemoveAt(val);
+    }
+ 
+    return arrDes;
+}
