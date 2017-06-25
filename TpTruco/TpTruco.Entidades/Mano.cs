@@ -6,33 +6,24 @@ namespace TpTruco.Entidades
 {
     public class Mano
     {
-        public int PuntosEquipo1 { get; set; }
-        public int PuntosEquipo2 { get; set; }
-
         public void Repartir()
         {
             List<Cartas> MazoCartas;
+            //
         }
 
-        public void Mezclar()
-        {
-            var mazo = new Mazo();
-            var cartas = mazo.MazoCartas;
-            Shuffle(cartas);
-        }
-        private Random rng = new Random();
+        public bool truco { get; set; }
+        public bool retruco { get; set; }
+        public bool vale4 { get; set; }
+        public bool envido { get; set; }
+        public bool envidoenvido { get; set; }
+        public bool realenvido { get; set; }
+        public bool faltaenvido { get; set; }
 
-        public void Shuffle<T>(this IList<T> list)
-        {
-            int n = list.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = rng.Next(n + 1);
-                T value = list[k];
-                list[k] = list[n];
-                list[n] = value;
-            }
-        }
+
+
+
+
+
     }
 }
