@@ -21,6 +21,6 @@ namespace TpTruco.Entidades
             this.Nombre = nombre;
             this.IdConexion = id;
         }
-
+        //
     }
 }

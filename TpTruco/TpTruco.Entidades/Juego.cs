@@ -87,6 +87,7 @@ namespace TpTruco.Entidades
 
         public void Jugar()
         {
+            //
             //Repartir Mano
             //Desarrollo de la mano (envido, truco, etc)
             //Contar puntos

@@ -9,6 +9,7 @@ namespace TpTruco.Entidades
         public void Repartir()
         {
             List<Cartas> MazoCartas;
+            //
         }
 
         

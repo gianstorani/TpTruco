@@ -11,6 +11,6 @@ namespace TpTruco.Entidades
         public Jugador J2 { get; set; }
         public int Puntos { get; set; }
 
-
+        //
     }
 }

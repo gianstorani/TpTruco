@@ -51,7 +51,7 @@ namespace TpTruco.Entidades
             MazoCartas.Add(new Cartas("11Oro", 6,0, Palos.Oro));
             MazoCartas.Add(new Cartas("12Oro", 7,0, Palos.Oro));
         }
-
+        //
         public enum Palos
         {
             Espada, Basto, Oro, Copa
