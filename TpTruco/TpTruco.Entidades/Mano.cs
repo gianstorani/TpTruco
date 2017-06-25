@@ -6,13 +6,11 @@ namespace TpTruco.Entidades
 {
     public class Mano
     {
-        public void Repartir()
-        {
-            List<Cartas> MazoCartas;
-            //
-        }
-
-        
+        //public void Repartir()
+        //{
+        //    List<Cartas> MazoCartas;
+        //    //
+        //}
 
         public bool truco { get; set; }
         public bool retruco { get; set; }
@@ -22,10 +20,7 @@ namespace TpTruco.Entidades
         public bool realenvido { get; set; }
         public bool faltaenvido { get; set; }
 
-
-
-
-
+        //Hacer constructor, poner las props en false
 
     }
 }

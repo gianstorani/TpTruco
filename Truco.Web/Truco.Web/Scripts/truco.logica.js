@@ -58,7 +58,7 @@ $(function() {
     // Evento click del boton "ingresar jugador".
     $("#botonAgregarJugador").click(function() {
         var userName = $("#userName").val();
-        $("#userRegion").hide()
+        $("#userRegion").hide();
 
         // Habilitar para el trabajo práctico.
         trucoHub.server.agregarJugador(userName);        
@@ -80,7 +80,7 @@ $(function() {
     };
 
     trucoHub.client.mostrarMensajeFinal = function(data) {
-        if (data == true) {
+        if (data === true) {//cambiamos 2 iguales por 3, tiraba un error
             bootbox.alert("GANASTE!");
         } else {
             bootbox.alert("PERDISTE!");
@@ -313,15 +313,15 @@ $(function() {
         $("#bottonRealEnvido").hide();
     };
     trucoHub.client.hideRealEnvidoOptions = function(data) {
-        $("#realEnvidoRegion").hide()
+        $("#realEnvidoRegion").hide();
         $("#bottonFaltaEnvido").hide();
     };
     trucoHub.client.showRealEnvidoOptions = function(data) {
-        $("#realEnvidoRegion").show()
+        $("#realEnvidoRegion").show();
         $("#bottonFaltaEnvido").show();
     };
     trucoHub.client.showEnvidoOptions = function(data) {
-        $("#envidoRegion").show()
+        $("#envidoRegion").show();
         $("#bottonEnvido").hide();
         $("#bottonEnvidoEnvido").show();
         $("#bottonFaltaEnvido").show();
@@ -330,7 +330,7 @@ $(function() {
 
     trucoHub.client.showQuieroEnvido = function(data) {
         lastAction = data;
-        $("#envidoRegion").hide()
+        $("#envidoRegion").hide();
         $("#quieroEnvidoRegion").show();
     };
 

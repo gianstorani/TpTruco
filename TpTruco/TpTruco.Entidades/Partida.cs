@@ -19,39 +19,61 @@ namespace TpTruco.Entidades
         {
             var nuevaMano = new Mano();
             var cartas = MazoPartida.MazoCartas;
-            Shuffle(cartas);
+            Random rng = new Random();
 
-            var jugadoresOrdenados = new List<Jugador>();
-            jugadoresOrdenados.AddRange(ListaJugadores.OrderBy(x => x.Orden));
-
-            int xi = 4;
-            while(xi > 0)
+            int x = 4;
+            bool cambio = false;
+            while (x>4)
             {
-                xi = xi - 1;
-                foreach (var jugador in jugadoresOrdenados)
+                x = x - 1;
+                foreach (var jugador in ListaJugadores)
                 {
-                    //asignar una carta a cada jugador, deshabilitar la carta
+                    while (cambio == false)
+                    {
+                        int puntero = rng.Next(0, 39);
+
+                        if (cartas[puntero].Dispobile == true)
+                        {
+                            jugador.CartasActuales.Add(cartas[puntero]);
+                            cartas[puntero].Dispobile = false;
+                            cambio = true;
+                        }
+                    }
                 }
             }
 
-            ManosPartida.Add(nuevaMano);
+        //Shuffle(cartas);
 
-        }
+        //var jugadoresOrdenados = new List<Jugador>();
+        //jugadoresOrdenados.AddRange(ListaJugadores.OrderBy(x => x.Orden));
 
-        public Random rng = new Random();
-        public void Shuffle<T>(this IList<T> list)
-        {
-            int n = list.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = rng.Next(n + 1);
-                T value = list[k];
-                list[k] = list[n];
-                list[n] = value;
-            }
-        }
+        //int xi = 4;
+        //while(xi > 0)
+        //{
+        //    xi = xi - 1;
+        //    foreach (var jugador in jugadoresOrdenados)
+        //    {
+        //        //asignar una carta a cada jugador, deshabilitar la carta
+        //    }
+        //}
+
+        //ManosPartida.Add(nuevaMano);
     }
+
+    //public Random rng = new Random();
+    //public void Shuffle<T>(this IList<T> list)
+    //{
+    //    int n = list.Count;
+    //    while (n > 1)
+    //    {
+    //        n--;
+    //        int k = rng.Next(n + 1);
+    //        T value = list[k];
+    //        list[k] = list[n];
+    //        list[n] = value;
+    //    }
+    //}
+}
 
     
 }
