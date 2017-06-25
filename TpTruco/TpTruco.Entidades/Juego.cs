@@ -63,15 +63,13 @@ namespace TpTruco.Entidades
             }
         }
 
-        public int PuntosEnvido(Equipo equipo)
-        {
-            
-            return 0;
-        }
+        
+        public Equipo GanadorEnvido(Equipo E1, Equipo E2) {
 
-        public Equipo GanadorEnvido() {
+            if ()
+            {
 
-
+            }
             return new Equipo();
         }
 

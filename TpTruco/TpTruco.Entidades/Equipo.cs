@@ -7,9 +7,19 @@ namespace TpTruco.Entidades
     public class Equipo
     {
         public string Nombre { get; set; }
-        public Jugador J1 { get; set; }
-        public Jugador J2 { get; set; }
+        public List<Jugador> JugadoresDelEquipo { get; set; }
         public int Puntos { get; set; }
+
+        public int PuntosEnvido(Equipo equipo)
+        {
+            foreach (Jugador item in equipo.JugadoresDelEquipo)
+            {
+
+            }
+            
+
+            return 0;
+        }
 
 
     }
