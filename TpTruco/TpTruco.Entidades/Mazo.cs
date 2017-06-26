@@ -10,6 +10,7 @@ namespace TpTruco.Entidades
 
         public Mazo()
         {
+            this.MazoCartas = new List<Cartas>();
             MazoCartas.Add(new Cartas("1Espada", 14,1, Palos.Espada, "Images/e1.jpg"));
             MazoCartas.Add(new Cartas("2Espada", 9,2, Palos.Espada, "Images/e2.jpg"));
             MazoCartas.Add(new Cartas("3Espada", 10,3, Palos.Espada, "Images/e3.jpg"));

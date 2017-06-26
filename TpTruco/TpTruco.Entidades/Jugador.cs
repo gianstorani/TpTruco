@@ -20,6 +20,7 @@ namespace TpTruco.Entidades
         {
             this.Nombre = nombre;
             this.IdConexion = id;
+            this.CartasActuales = new List<Cartas>();
         }
         //
 

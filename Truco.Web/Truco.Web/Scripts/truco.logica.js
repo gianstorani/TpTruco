@@ -234,7 +234,8 @@ $(function() {
         $("#movements").show();
     };
 
-    trucoHub.client.limpiarTablero = function() {
+    trucoHub.client.limpiarTablero = function () {
+        alert("Entra a limpiar cara");
         Limpiar();
     };
 

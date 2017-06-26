@@ -23,13 +23,15 @@ namespace Truco.Web.Hubs
             if (juego.JuegoCompleto)
             {
                 Clients.Caller.mostrarmensaje("El juego ya está completo!");
+
+
             }
             else // Sino ...
             {
                 juego.AgregarJugador(nombre, Context.ConnectionId);
                 Clients.Others.mostrarnuevousuario(nombre);
                 // Por cada jugador - Les avisa que hay un nuevo jugador asdasd
-                foreach (Jugador item in juego.ListaJugadores)
+                foreach (Jugador item in juego.Partida.ListaJugadores)
                 {
                     Clients.All.mostrarnombre(nombre);
                 }
@@ -38,7 +40,6 @@ namespace Truco.Web.Hubs
 
             }
 
-            // Por cada jugador 
             if (juego.JuegoCompleto)
             {
                 Clients.All.mostrarpuntos("Ellos", 0);
@@ -46,14 +47,15 @@ namespace Truco.Web.Hubs
 
                 //juego.ComenzarJuego(ValorMaximo);
 
-                juego.partida.Repartir();
+                juego.Partida.Repartir();
 
                 Repartir();
 
             }
             
-
         }
+
+       
 
 
         //public void cantar(string accion)
@@ -141,7 +143,7 @@ namespace Truco.Web.Hubs
         {
             Clients.All.limpiarTablero();
 
-            foreach (Jugador jugador in juego.ListaJugadores)
+            foreach (Jugador jugador in juego.Partida.ListaJugadores)
             {
                 foreach (Cartas carta in jugador.CartasActuales)
                 {

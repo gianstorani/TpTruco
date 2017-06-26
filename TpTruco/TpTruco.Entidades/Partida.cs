@@ -14,22 +14,30 @@ namespace TpTruco.Entidades
         public Equipo Equipo2 { get; set; }
         public List<Mano> ManosPartida { get; set; }
         public Mazo MazoPartida { get; set; }
+        public Partida()
+        {
+            this.ListaJugadores = new List<Jugador>();
+            this.ManosPartida = new List<Mano>();
+        }
 
         public void Repartir()
         {
+            //var MazoPartida = new Mazo();
             var nuevaMano = new Mano();
+            var MazoPartida = new Mazo();
             var cartas = MazoPartida.MazoCartas;
             Random rng = new Random();
 
-            int x = 4;
+            int x = 3;
             bool cambio = false;
-            while (x>4)
+            while (x>0)
             {
                 x = x - 1;
-                foreach (var jugador in ListaJugadores)
+                foreach (Jugador jugador in ListaJugadores)
                 {
                     while (cambio == false)
                     {
+
                         int puntero = rng.Next(0, 39);
 
                         if (cartas[puntero].Dispobile == true)
@@ -39,6 +47,7 @@ namespace TpTruco.Entidades
                             cambio = true;
                         }
                     }
+                    cambio = false;
                 }
             }
 
@@ -73,7 +82,7 @@ namespace TpTruco.Entidades
     //        list[n] = value;
     //    }
     //}
-}
+    }
 
     
 }
