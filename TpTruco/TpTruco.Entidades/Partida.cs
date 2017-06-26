@@ -54,6 +54,8 @@ namespace TpTruco.Entidades
                 }
             }
 
+            ManosPartida.Add(nuevaMano);
+
         //Shuffle(cartas);
 
         //var jugadoresOrdenados = new List<Jugador>();

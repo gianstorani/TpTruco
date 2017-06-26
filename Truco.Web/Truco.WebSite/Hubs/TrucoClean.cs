@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using TpTruco.Entidades;
 
-namespace Truco.Web.Hubs
+namespace Truco.WebSite.Hubs
 {
     [HubName("truco")]
     public class Truco : Hub
