@@ -10,15 +10,9 @@ namespace TpTruco.Entidades
         public List<Jugador> JugadoresDelEquipo { get; set; }
         public int Puntos { get; set; }
 
-        public int PuntosEnvido(Equipo equipo)
+        public Equipo()
         {
-            foreach (Jugador item in equipo.JugadoresDelEquipo)
-            {
-
-            }
-            
-
-            return 0;
+            this.JugadoresDelEquipo = new List<Jugador>();
         }
 
 
