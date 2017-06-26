@@ -23,8 +23,7 @@ namespace Truco.Web.Hubs
             if (juego.JuegoCompleto)
             {
                 Clients.Caller.mostrarmensaje("El juego ya está completo!");
-
-
+                
             }
             else // Sino ...
             {

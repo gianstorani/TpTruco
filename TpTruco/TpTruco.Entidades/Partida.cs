@@ -18,6 +18,9 @@ namespace TpTruco.Entidades
         {
             this.ListaJugadores = new List<Jugador>();
             this.ManosPartida = new List<Mano>();
+            this.Equipo1 = new Equipo();
+            this.Equipo2 = new Equipo();
+
         }
 
         public void Repartir()

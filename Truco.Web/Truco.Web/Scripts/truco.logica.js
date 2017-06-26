@@ -80,7 +80,7 @@ $(function() {
     };
 
     trucoHub.client.mostrarMensajeFinal = function(data) {
-        if (data === true) {//cambiamos 2 iguales por 3, tiraba un error
+        if (data === true) {//cambiamos 2 "=" por 3, tiraba un error
             bootbox.alert("GANASTE!");
         } else {
             bootbox.alert("PERDISTE!");

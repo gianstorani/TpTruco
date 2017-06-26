@@ -24,7 +24,7 @@ namespace TpTruco.Entidades
             }
         }
 
-        public void 
+        //public void 
 
 
 
