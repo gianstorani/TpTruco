@@ -12,22 +12,26 @@ namespace TpTruco.Entidades
         public List<Jugador> ListaJugadores { get; set; }
         public Equipo Equipo1 { get; set; }
         public Equipo Equipo2 { get; set; }
-        public List<Mano> ManosPartida { get; set; }
+        public List<Ronda> RondasPartida { get; set; }
         public Mazo MazoPartida { get; set; }
+        public int Repartidor { get; set; }
+
         public Partida()
         {
             this.ListaJugadores = new List<Jugador>();
-            this.ManosPartida = new List<Mano>();
+            this.RondasPartida = new List<Ronda>();
             this.Equipo1 = new Equipo();
             this.Equipo2 = new Equipo();
+            this.Repartidor = 1;
         }
 
         public void Repartir()
         {
-            var nuevaMano = new Mano();
+            var nuevaMano = new Ronda(this.Repartidor);
             var MazoPartida = new Mazo();
             var cartas = MazoPartida.MazoCartas;
             Random rng = new Random();
+
 
             int x = 3;
             bool cambio = false;
@@ -52,7 +56,7 @@ namespace TpTruco.Entidades
                 }
             }
 
-            ManosPartida.Add(nuevaMano);
+            RondasPartida.Add(nuevaMano);
         }
     }    
 }

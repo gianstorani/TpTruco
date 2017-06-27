@@ -12,15 +12,13 @@ namespace TpTruco.Entidades
 
         public Partida Partida { get; set; }
 
-        //public List<Jugador> ListaJugadores { get; set; }
-
+        
         public Juego()
         {
             JuegoCompleto = false;
 
             this.Partida = new Partida();
 
-            //this.ListaJugadores = new List<Jugador>();
         }
 
 
@@ -39,6 +37,7 @@ namespace TpTruco.Entidades
                 {
                     case 1: jugador.NombreInterno = "user1";
                         Partida.Equipo1.JugadoresDelEquipo.Add(jugador);
+                        
                             break;
 
                     case 2:
@@ -63,9 +62,7 @@ namespace TpTruco.Entidades
                 if(Partida.ListaJugadores.Count == 4)
                 {
                     JuegoCompleto = true;
-                }
-                
-                
+                }      
             }
         }
 
@@ -96,24 +93,6 @@ namespace TpTruco.Entidades
             }
         }
 
-        public void ComenzarJuego(int ValorMaximo)
-        {
-            while(Partida.Equipo1.Puntos > ValorMaximo && Partida.Equipo2.Puntos > ValorMaximo)
-            {
-                Jugar();
-            }
-            //JuegoTerminado();
-        }
-
-        public void Jugar()
-        {
-            //
-            //Repartir Mano
-            Partida.Repartir();
-            //Desarrollo de la mano (envido, truco, etc)
-
-            //Contar puntos
-        }
 
         //public void JuegoTerminado()
         //{
