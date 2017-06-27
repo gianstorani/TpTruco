@@ -37,31 +37,28 @@ namespace TpTruco.Entidades
 
                 switch (jugador.Orden)
                 {
-                    case 1: jugador.NombreInterno = "User1";
+                    case 1: jugador.NombreInterno = "user1";
                         Partida.Equipo1.JugadoresDelEquipo.Add(jugador);
                             break;
 
                     case 2:
-                        jugador.NombreInterno = "User2";
+                        jugador.NombreInterno = "user2";
                         Partida.Equipo2.JugadoresDelEquipo.Add(jugador);
 
                         break;
 
                     case 3:
-                        jugador.NombreInterno = "User3";
+                        jugador.NombreInterno = "user3";
                         Partida.Equipo1.JugadoresDelEquipo.Add(jugador);
 
                         break;
 
                     case 4:
-                        jugador.NombreInterno = "User4";
+                        jugador.NombreInterno = "user4";
                         Partida.Equipo2.JugadoresDelEquipo.Add(jugador);
 
                         break;
                 }
-
-                //Partida.ListaJugadores = this.ListaJugadores;
-
 
                 if(Partida.ListaJugadores.Count == 4)
                 {

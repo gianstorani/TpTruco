@@ -18,7 +18,6 @@ namespace Truco.WebSite.Hubs
 
         public void AgregarJugador(string nombre)
         {
-
             // Si el juego esta completo...
             if (juego.JuegoCompleto)
             {
@@ -29,6 +28,9 @@ namespace Truco.WebSite.Hubs
             {
                 juego.AgregarJugador(nombre, Context.ConnectionId);
                 Clients.Others.mostrarnuevousuario(nombre);
+
+                Clients.Caller.mostrarmensaje("Te uniste a la partida!");
+
                 // Por cada jugador - Les avisa que hay un nuevo jugador asdasd
                 foreach (Jugador item in juego.Partida.ListaJugadores)
                 {
@@ -36,7 +38,6 @@ namespace Truco.WebSite.Hubs
                 }
 
                 // Si es el ultimo jugador...
-
             }
 
             if (juego.JuegoCompleto)
@@ -49,7 +50,6 @@ namespace Truco.WebSite.Hubs
                 juego.Partida.Repartir();
 
                 Repartir();
-
             }
             
         }
