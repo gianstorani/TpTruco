@@ -24,6 +24,10 @@ function mostrarMovimientos() {
     $("#movements").show();
 }
 
+function limpiarCartas() {
+    $("#cards").html("");
+}
+
 // Limpia el tablero.
 function Limpiar() {
     // Ocultamos las acciones.
@@ -79,13 +83,14 @@ $(function() {
         $("#messages").prepend("<p>" + data + " se ha unido al juego!</p>");
     };
 
-    trucoHub.client.mostrarMensajeFinal = function(data) {
-        if (data === true) {//cambiamos 2 "=" por 3, tiraba un error
-            bootbox.alert("GANASTE!");
-        } else {
-            bootbox.alert("PERDISTE!");
-        }
-    };
+    //trucoHub.client.mostrarMensajeFinal = function (data) {
+    //    alert("Gano alguien")
+    //    if (data === true) {//cambiamos 2 "=" por 3, tiraba un error
+    //        bootbox.alert("GANASTE!");
+    //    } else {
+    //        bootbox.alert("PERDISTE!");
+    //    }
+    //};
     $("#bottonEnvido").click(function() {
         $("#bottonEnvido").hide();
         trucoHub.server.cantar("envido");
@@ -195,13 +200,22 @@ $(function() {
         $("#bottonNoQuieroVale4").hide();
         trucoHub.server.ejecutarAccion("Vale4", false);
     });
+
     trucoHub.client.mostrarmensaje = function(data) {
         $("#messages").prepend("<p>" + data + "</p>");
+    };
+
+    trucoHub.client.limpiarmensaje = function () {
+        $("#messages").html("");
     };
 
     trucoHub.client.mostrarpuntos = function(equipo, puntos) {
         $("#punt").prepend("<p>" + puntos + "</p>");
         $("#punt").prepend("<p>" + equipo + "</p>");
+    };
+
+    trucoHub.client.mostrarganadorronda = function (data) {
+        alert(data);
     };
 
     trucoHub.client.limpiarpuntos = function() {
